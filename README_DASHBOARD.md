@@ -10,21 +10,27 @@ A simple React frontend dashboard with Flask backend to display user retention m
 ```bash
 uv pip install -r requirements.txt
 ```
-Or if using UV project management:
-```bash
-uv sync
-```
 
 2. Run the Flask server:
-```bash
-uv run python app.py
-```
-Or if using a virtual environment:
 ```bash
 python app.py
 ```
 
-The backend will run on `http://localhost:5000`
+Or use the provided script:
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+The backend will run on `http://localhost:5000` (or the port specified in `.env`)
+
+**For Production Deployment:**
+- Set `FLASK_DEBUG=False` in your `.env` file
+- Consider using a production WSGI server like gunicorn:
+  ```bash
+  uv pip install gunicorn
+  gunicorn -w 4 -b 0.0.0.0:5000 app:app
+  ```
 
 ### Frontend Setup
 

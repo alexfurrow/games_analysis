@@ -1,32 +1,34 @@
-# Python - only exclude cache and virtual environments (dependencies should be installed)
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
 env/
 venv/
 ENV/
 .venv
 
-# Node - only exclude node_modules (dependencies should be installed)
+# React
 node_modules/
 frontend/node_modules/
-
-# Environment files (if you add them later)
-.env
-.env.local
-.env.*.local
+frontend/build/
 frontend/.env.local
 frontend/.env.development.local
 frontend/.env.test.local
 frontend/.env.production.local
 
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
 # OS
 .DS_Store
 Thumbs.db
 
-# Data Files - exclude large CSV data files
+#Data Files
 auth_data.csv
 reg_data.csv
 ab_test.csv

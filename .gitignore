@@ -28,3 +28,7 @@ frontend/.env.production.local
 .DS_Store
 Thumbs.db
 
+#Data Files
+auth_data.csv
+reg_data.csv
+ab_test.csv
